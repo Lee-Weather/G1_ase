@@ -8,7 +8,9 @@
 
 ```text
 ACCAD 动作捕捉（CMU ACCAD）
-  → UMR 点云对应重定向到 Unitree G1 29-DoF        E:/UMR/umr_data/G1（45 条 @120 Hz）
+  → UMR 点云对应重定向到 Unitree G1 29-DoF        45 条 @120 Hz，分两处存放：
+      组内共享目录（只读）E:/UMR/umr_data/G1        原始 30 条
+      本项目目录（可写）  czy/data/umr_g1_stop_data  新补 15 条
   → 本仓库转换：50 Hz 重采样 + MuJoCo 正向运动学     czy/g1_wbt/scripts/umr_g1_to_tracking.py
   → ase/data/motions/g1/*.npz + dataset_g1.yaml
 ```
@@ -20,9 +22,13 @@ ACCAD 动作捕捉（CMU ACCAD）
 | 原始批 | 30 | Female1/Male1/Male2 的走、转向、起停、跑、跳跃 |
 | exp_f1_7.1 补充批 | 15 | 真实静止站立 `A1`、站立摆动 `A2`、跑/冲刺（`C2 C4 C6 C7`、`M2_C1 M2_C3 M2_C4 M2_C5`、`S007 S008 S009`）、`B2`/`B4` 起停 |
 
+> `E:/UMR/umr_data/G1` 是组内共享的数据目录，**只读不改**；新补的片段一律写进本项目
+> `czy/data/umr_g1_stop_data/`（同样按 `<类别>/` 组织）。转换脚本的两个默认输入目录都在
+> `DEFAULT_INPUT_DIRS` 里，并会按"类别 + 片段名"统一排序，所以片段放在哪个目录不影响清单顺序。
+
 补充批用的是**同一套** UMR 配置（`E:/UMR/czy/g1/umr_g1_config.json` + `correspondence_slots_final.npz`），
 与原始批完全一致；批量脚本 `E:/UMR/umr_g1/batch_g1_stop_data.py`（15 条全部 ok，单条 20~58 s）。
-挑选依据：`E:/F1/F1_ase_h/czy/data/exp_f1_7.1/README.md`（F1 上验证过的成功配方）。
+挑选依据：上一代机型项目里的 `czy/data/exp_f1_7.1/README.md`（那轮已验证过的成功配方）。
 
 ## 清单与权重
 
@@ -78,7 +84,7 @@ ACCAD 动作捕捉（CMU ACCAD）
 - **骨盆朝向有噪声**：逐帧偏航角速度均值 0.5~0.8 rad/s；AMP 观测去偏航并旋转到根坐标系，
   噪声只落在根角速度维度，但足以给判别器一条捷径。
 - **没有 LAFAN**：exp_f1_7.1 里 LAFAN1 的 walk/run 占 12.9% 权重，这里完全没有；
-  要补得先把裁剪 BVH（`E:/F1/F1_ase_h/czy/f1_wbt/lafan_src`）转成 SMPL-X 再走 UMR。
+  要补得先把裁剪 BVH（上一代项目里的 `czy/f1_wbt/lafan_src`）转成 SMPL-X 再走 UMR。
 
 ## 重建与校验
 

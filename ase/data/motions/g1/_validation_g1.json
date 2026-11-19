@@ -1,6 +1,6 @@
 {
   "fps": 50.0,
-  "source_dir": "E:/UMR/umr_data/G1",
+  "source_dir": "E:\\UMR\\umr_data\\G1, E:\\G1\\G1_ase_h\\czy\\data\\umr_g1_stop_data",
   "clips": [
     {
       "file": "A1_stand_g1_29.npz",
