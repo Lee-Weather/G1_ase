@@ -3,6 +3,42 @@
   "source_dir": "E:/UMR/umr_data/G1",
   "clips": [
     {
+      "file": "A1_stand_g1_29.npz",
+      "group": "accad_general",
+      "frames_in": 150,
+      "frames_out": 150,
+      "seconds": 3.0,
+      "root_z": [
+        0.79,
+        0.791
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 0.0,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0004,
+      "max_joint_vel": 9.5,
+      "p99_joint_vel": 0.36,
+      "root_speed_p95": 0.02
+    },
+    {
+      "file": "A2_sway_g1_29.npz",
+      "group": "accad_general",
+      "frames_in": 601,
+      "frames_out": 601,
+      "seconds": 12.02,
+      "root_z": [
+        0.755,
+        0.793
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 0.0,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0,
+      "max_joint_vel": 4.01,
+      "p99_joint_vel": 0.96,
+      "root_speed_p95": 0.14
+    },
+    {
       "file": "Female1_A14_stand_to_skip_g1_29.npz",
       "group": "accad_general",
       "frames_in": 258,
@@ -39,6 +75,24 @@
       "root_speed_p95": 1.65
     },
     {
+      "file": "Female1_C2_run_to_stand_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 266,
+      "frames_out": 266,
+      "seconds": 5.32,
+      "root_z": [
+        0.686,
+        0.794
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 5.3,
+      "joint_limit_violations": 0,
+      "z_shift": -0.0002,
+      "max_joint_vel": 25.59,
+      "p99_joint_vel": 10.06,
+      "root_speed_p95": 3.21
+    },
+    {
       "file": "Female1_C3_Run_g1_29.npz",
       "group": "accad_running",
       "frames_in": 85,
@@ -57,6 +111,24 @@
       "root_speed_p95": 3.88
     },
     {
+      "file": "Female1_C4_run_to_walk_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 177,
+      "frames_out": 177,
+      "seconds": 3.54,
+      "root_z": [
+        0.695,
+        0.799
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 5.6,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0003,
+      "max_joint_vel": 15.94,
+      "p99_joint_vel": 9.01,
+      "root_speed_p95": 2.92
+    },
+    {
       "file": "Female1_C5_walk_to_run_g1_29.npz",
       "group": "accad_running",
       "frames_in": 271,
@@ -73,6 +145,150 @@
       "max_joint_vel": 15.0,
       "p99_joint_vel": 8.8,
       "root_speed_p95": 3.25
+    },
+    {
+      "file": "Female1_C6_stand_to_run_backwards_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 374,
+      "frames_out": 374,
+      "seconds": 7.48,
+      "root_z": [
+        0.701,
+        0.791
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 1.6,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0003,
+      "max_joint_vel": 10.66,
+      "p99_joint_vel": 6.24,
+      "root_speed_p95": 2.18
+    },
+    {
+      "file": "Female1_C7_run_backwards_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 155,
+      "frames_out": 155,
+      "seconds": 3.1,
+      "root_z": [
+        0.717,
+        0.788
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 8.4,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0004,
+      "max_joint_vel": 11.75,
+      "p99_joint_vel": 8.63,
+      "root_speed_p95": 2.48
+    },
+    {
+      "file": "Male2_C1_stand_to_run_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 205,
+      "frames_out": 205,
+      "seconds": 4.1,
+      "root_z": [
+        0.684,
+        0.85
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 9.8,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0003,
+      "max_joint_vel": 13.87,
+      "p99_joint_vel": 7.58,
+      "root_speed_p95": 2.72
+    },
+    {
+      "file": "Male2_C3_run_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 136,
+      "frames_out": 136,
+      "seconds": 2.72,
+      "root_z": [
+        0.772,
+        0.932
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 97.1,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0021,
+      "max_joint_vel": 18.63,
+      "p99_joint_vel": 11.64,
+      "root_speed_p95": 3.21
+    },
+    {
+      "file": "Male2_C4_run_to_walk_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 193,
+      "frames_out": 193,
+      "seconds": 3.86,
+      "root_z": [
+        0.724,
+        0.83
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 22.8,
+      "joint_limit_violations": 0,
+      "z_shift": -0.0003,
+      "max_joint_vel": 13.43,
+      "p99_joint_vel": 6.53,
+      "root_speed_p95": 2.42
+    },
+    {
+      "file": "Male2_C5_walk_to_run_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 178,
+      "frames_out": 178,
+      "seconds": 3.56,
+      "root_z": [
+        0.723,
+        0.881
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 25.3,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0003,
+      "max_joint_vel": 14.7,
+      "p99_joint_vel": 9.49,
+      "root_speed_p95": 3.0
+    },
+    {
+      "file": "S008_run1_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 90,
+      "frames_out": 90,
+      "seconds": 1.8,
+      "root_z": [
+        0.645,
+        0.745
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 5.6,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0009,
+      "max_joint_vel": 18.77,
+      "p99_joint_vel": 13.18,
+      "root_speed_p95": 4.1
+    },
+    {
+      "file": "S009_sprint1_g1_29.npz",
+      "group": "accad_running",
+      "frames_in": 110,
+      "frames_out": 110,
+      "seconds": 2.2,
+      "root_z": [
+        0.682,
+        0.804
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 1.8,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0004,
+      "max_joint_vel": 14.77,
+      "p99_joint_vel": 9.45,
+      "root_speed_p95": 2.53
     },
     {
       "file": "Female1_B10_walk_turn_left_45_g1_29.npz",
@@ -219,6 +435,24 @@
       "root_speed_p95": 0.93
     },
     {
+      "file": "Female1_B2_walk_to_stand_g1_29.npz",
+      "group": "accad_walking",
+      "frames_in": 284,
+      "frames_out": 284,
+      "seconds": 5.68,
+      "root_z": [
+        0.739,
+        0.785
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 0.0,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0003,
+      "max_joint_vel": 6.78,
+      "p99_joint_vel": 3.82,
+      "root_speed_p95": 0.89
+    },
+    {
       "file": "Female1_B3_walk1_g1_29.npz",
       "group": "accad_walking",
       "frames_in": 381,
@@ -235,6 +469,24 @@
       "max_joint_vel": 7.86,
       "p99_joint_vel": 4.64,
       "root_speed_p95": 1.02
+    },
+    {
+      "file": "Female1_B4_stand_to_walk_back_g1_29.npz",
+      "group": "accad_walking",
+      "frames_in": 378,
+      "frames_out": 378,
+      "seconds": 7.56,
+      "root_z": [
+        0.75,
+        0.789
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 0.0,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0004,
+      "max_joint_vel": 8.41,
+      "p99_joint_vel": 2.58,
+      "root_speed_p95": 0.72
     },
     {
       "file": "Female1_B5_walk_backwards_g1_29.npz",
@@ -541,161 +793,27 @@
       "max_joint_vel": 8.27,
       "p99_joint_vel": 4.98,
       "root_speed_p95": 1.19
+    },
+    {
+      "file": "S007_qk_walk1_g1_29.npz",
+      "group": "accad_walking",
+      "frames_in": 128,
+      "frames_out": 128,
+      "seconds": 2.56,
+      "root_z": [
+        0.717,
+        0.786
+      ],
+      "foot_z_min": 0.0,
+      "airborne_pct": 0.0,
+      "joint_limit_violations": 0,
+      "z_shift": 0.0002,
+      "max_joint_vel": 15.15,
+      "p99_joint_vel": 8.9,
+      "root_speed_p95": 2.21
     }
   ],
-  "stands": {
-    "A1_stand_g1_29.npz": {
-      "source": "Male2_B14_turn_right_45_g1_29.npz",
-      "start": 0.0,
-      "stop": 2.4,
-      "frames": 120,
-      "root_speed": 0.033
-    },
-    "A2_sway_g1_29.npz": {
-      "source": "Female1_B6_walk_backwards_to_stand_g1_29.npz",
-      "start": 6.0,
-      "stop": 8.18,
-      "frames": 109,
-      "root_speed": 0.115
-    }
-  },
-  "straight_segments": [
-    {
-      "file": "Female1_B10_walk_turn_left_45_straight_g1_29.npz",
-      "source": "Female1_B10_walk_turn_left_45_g1_29.npz",
-      "start": 4.3,
-      "stop": 7.0,
-      "frames": 135,
-      "covered": 0.34
-    },
-    {
-      "file": "Female1_B11_walk_turn_left_135_straight_g1_29.npz",
-      "source": "Female1_B11_walk_turn_left_135_g1_29.npz",
-      "start": 1.3,
-      "stop": 4.0,
-      "frames": 135,
-      "covered": 0.29
-    },
-    {
-      "file": "Female1_B13_walk_turn_right_45_straight_g1_29.npz",
-      "source": "Female1_B13_walk_turn_right_45_g1_29.npz",
-      "start": 0.68,
-      "stop": 3.38,
-      "frames": 135,
-      "covered": 0.33
-    },
-    {
-      "file": "Female1_B14_walk_turn_right_135_straight_g1_29.npz",
-      "source": "Female1_B14_walk_turn_right_135_g1_29.npz",
-      "start": 0.66,
-      "stop": 3.36,
-      "frames": 135,
-      "covered": 0.3
-    },
-    {
-      "file": "Female1_B15_walk_turn_around_straight_g1_29.npz",
-      "source": "Female1_B15_walk_turn_around_g1_29.npz",
-      "start": 1.7,
-      "stop": 4.4,
-      "frames": 135,
-      "covered": 0.25
-    },
-    {
-      "file": "Female1_B16_walk_turn_change_direction_straight_g1_29.npz",
-      "source": "Female1_B16_walk_turn_change_direction_g1_29.npz",
-      "start": 7.02,
-      "stop": 9.72,
-      "frames": 135,
-      "covered": 0.25
-    },
-    {
-      "file": "Female1_B9_walk_turn_left_90_straight_g1_29.npz",
-      "source": "Female1_B9_walk_turn_left_90_g1_29.npz",
-      "start": 0.14,
-      "stop": 2.84,
-      "frames": 135,
-      "covered": 0.38
-    },
-    {
-      "file": "Male1_Walk_B10_turn_left_45_straight_g1_29.npz",
-      "source": "Male1_Walk_B10_turn_left_45_g1_29.npz",
-      "start": 5.26,
-      "stop": 7.96,
-      "frames": 135,
-      "covered": 0.32
-    },
-    {
-      "file": "Male1_Walk_B13_turn_right_45_straight_g1_29.npz",
-      "source": "Male1_Walk_B13_turn_right_45_g1_29.npz",
-      "start": 5.92,
-      "stop": 8.62,
-      "frames": 135,
-      "covered": 0.29
-    },
-    {
-      "file": "Male1_Walk_B15_turn_around_straight_g1_29.npz",
-      "source": "Male1_Walk_B15_turn_around_g1_29.npz",
-      "start": 1.24,
-      "stop": 3.94,
-      "frames": 135,
-      "covered": 0.24
-    },
-    {
-      "file": "Male1_Walk_B16_turn_change_straight_g1_29.npz",
-      "source": "Male1_Walk_B16_turn_change_g1_29.npz",
-      "start": 1.52,
-      "stop": 4.22,
-      "frames": 135,
-      "covered": 0.22
-    },
-    {
-      "file": "Male2_B10_turn_left_45_straight_g1_29.npz",
-      "source": "Male2_B10_turn_left_45_g1_29.npz",
-      "start": 0.06,
-      "stop": 2.76,
-      "frames": 135,
-      "covered": 0.45
-    },
-    {
-      "file": "Male2_B11_turn_left_135_straight_g1_29.npz",
-      "source": "Male2_B11_turn_left_135_g1_29.npz",
-      "start": 3.76,
-      "stop": 6.46,
-      "frames": 135,
-      "covered": 0.42
-    },
-    {
-      "file": "Male2_B13_turn_right_90_straight_g1_29.npz",
-      "source": "Male2_B13_turn_right_90_g1_29.npz",
-      "start": 3.0,
-      "stop": 5.62,
-      "frames": 131,
-      "covered": 0.47
-    },
-    {
-      "file": "Male2_B14_turn_right_45_t2_straight_g1_29.npz",
-      "source": "Male2_B14_turn_right_45_t2_g1_29.npz",
-      "start": 0.26,
-      "stop": 2.96,
-      "frames": 135,
-      "covered": 0.47
-    },
-    {
-      "file": "Male2_B15_turn_around_straight_g1_29.npz",
-      "source": "Male2_B15_turn_around_g1_29.npz",
-      "start": 0.1,
-      "stop": 2.8,
-      "frames": 135,
-      "covered": 0.36
-    },
-    {
-      "file": "Male2_B9_turn_left_90_straight_g1_29.npz",
-      "source": "Male2_B9_turn_left_90_g1_29.npz",
-      "start": 0.0,
-      "stop": 2.6,
-      "frames": 130,
-      "covered": 0.52
-    }
-  ],
-  "total_frames": 13828
+  "stands": {},
+  "straight_segments": [],
+  "total_frames": 14738
 }

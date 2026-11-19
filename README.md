@@ -14,7 +14,7 @@
 | LLC / HLC 任务、配置、训练与回放代码 | 完成，观测维度与上一代一致（actor 93 / critic 448 / AMP 890） |
 | 静态一致性自检 | 通过：`python ase/tests/test_g1_consistency.py` |
 | MuJoCo 冒烟（资产、姿态、增益、动作映射） | 通过：`czy/g1_wbt/scripts/check_g1_mujoco.py` |
-| G1 参考动作数据集 | 完成：由 UMR 的 G1 重定向结果转出 49 条 / 13,828 帧 / 4.6 分钟 |
+| G1 参考动作数据集 | 完成：45 条 / 14,738 帧 / 4.9 分钟（含 exp_f1_7.1 补充的 15 条：真实站立、跑/冲刺/快走、`B2`/`B4` 起停） |
 | G1 的 LLC 训练 | 已跑通：201.5 上 512 env × 10 iter 冒烟通过（2.3 s/iter，检查点正常写出） |
 | G1 的 HLC 训练与回放 | **尚未运行**，还在等一次正式 LLC 训练产出可冻结的权重 |
 
@@ -113,7 +113,7 @@ MuJoCo 回放可独立于 Isaac Gym 运行。本机已验证 MuJoCo 3.15.0、Num
 
 ## 参考动作与 LLC 训练
 
-参考动作共 49 条 / 13,828 帧 / 50 Hz（4.6 分钟），来源是 ACCAD 经 UMR 重定向到 G1 的结果，
+参考动作共 45 条 / 14,738 帧 / 50 Hz（4.9 分钟），来源是 ACCAD 经 UMR 重定向到 G1 的结果，
 再由 `czy/g1_wbt/scripts/umr_g1_to_tracking.py` 重采样并做正向运动学转成 tracking NPZ。
 权重分配、数据特性与重建方式见 [ase/data/motions/g1/README.md](ase/data/motions/g1/README.md)。
 
