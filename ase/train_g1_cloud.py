@@ -114,6 +114,9 @@ def prepare_checkpoint(checkpoint, source_url=None, expected_sha256=None, label=
     replacing the destination, and never written into the training repository.
     """
     checkpoint = Path(checkpoint)
+    if expected_sha256:
+        expected_sha256 = expected_sha256.lower()
+
     def digest(path):
         hasher = hashlib.sha256()
         with path.open("rb") as file:
@@ -122,8 +125,7 @@ def prepare_checkpoint(checkpoint, source_url=None, expected_sha256=None, label=
         return hasher.hexdigest()
     if source_url and not checkpoint.exists():
         checkpoint.parent.mkdir(parents=True, exist_ok=True)
-        checkpoint.parent.mkdir(parents=True, exist_ok=True)
-    temporary = checkpoint.with_name(checkpoint.name+".download")
+        temporary = checkpoint.with_name(checkpoint.name+".download")
         try:
             with urllib.request.urlopen(source_url, timeout=120) as response, temporary.open("wb") as target:
                 shutil.copyfileobj(response, target)
