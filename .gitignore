@@ -10,3 +10,4 @@ review/
 .deps/
 # 上游 ASE 的剑盾演示权重（154 MB），与本项目的 G1 训练无关，不入库。
 ase/data/models/*.pth
+ase/data/llc/
