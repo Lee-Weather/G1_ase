@@ -1,0 +1,53 @@
+# G1 参考动作清单：复刻 exp_f1_7（7.0）的 24 条素材与采样权重。
+# 素材：上一代机型 exp_f1_7 实际训练用的 24 条，经 UMR 重新重定向到 Unitree G1 29-DoF。
+# 权重：完全沿用 exp_f1_7 的原始值（0.2~1.0，和 15.5），MotionLib 内部归一化。
+# 说明：czy/data/G1_F1_7_ref24/README.md；本清单不含转向片段（7.0 也没有）。
+motions:
+- file: A1_stand_g1_29.npz
+  weight: 0.2
+- file: A2_sway_g1_29.npz
+  weight: 0.2
+- file: B1_stand_to_walk_g1_29.npz
+  weight: 0.5
+- file: B2_walk_to_stand_g1_29.npz
+  weight: 0.5
+- file: B2t2_walk_to_stand_g1_29.npz
+  weight: 0.4
+- file: B3_walk1_g1_29.npz
+  weight: 1
+- file: B4_stand_to_walk_back_g1_29.npz
+  weight: 0.5
+- file: B5_walk_backwards_g1_29.npz
+  weight: 0.5
+- file: C2_run_to_stand_g1_29.npz
+  weight: 0.5
+- file: C3_run_g1_29.npz
+  weight: 1
+- file: C4_run_to_walk_g1_29.npz
+  weight: 0.5
+- file: C5_walk_to_run_g1_29.npz
+  weight: 0.7
+- file: C6_stand_to_run_backwards_g1_29.npz
+  weight: 0.4
+- file: C7_run_backwards_g1_29.npz
+  weight: 0.4
+- file: M2_C1_stand_to_run_g1_29.npz
+  weight: 0.6
+- file: M2_C3_run_g1_29.npz
+  weight: 1
+- file: M2_C4_run_to_walk_g1_29.npz
+  weight: 0.5
+- file: M2_C5_walk_to_run_g1_29.npz
+  weight: 0.7
+- file: S007_qk_walk1_g1_29.npz
+  weight: 0.6
+- file: S008_run1_g1_29.npz
+  weight: 1
+- file: S009_sprint1_g1_29.npz
+  weight: 0.8
+- file: LAFAN_run_moderate_s2_g1_29.npz
+  weight: 1
+- file: LAFAN_run_fast_s4_g1_29.npz
+  weight: 1
+- file: LAFAN_walk_s1_g1_29.npz
+  weight: 1
