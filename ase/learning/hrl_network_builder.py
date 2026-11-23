@@ -31,11 +31,16 @@ class HRLBuilder(network_builder.A2CBuilder):
                     self.critic_input_mean_std = RunningMeanStd(critic_shape)
 
             if self.is_continuous:
+                sigma_config = self.space_config['sigma_init']
                 if (not self.space_config['learn_sigma']):
                     actions_num = kwargs.get('actions_num')
-                    sigma_init = self.init_factory.create(**self.space_config['sigma_init'])
+                    sigma_init = self.init_factory.create(**sigma_config)
                     self.sigma = nn.Parameter(torch.zeros(actions_num, requires_grad=False, dtype=torch.float32), requires_grad=False)
                     sigma_init(self.sigma)
+                elif not self.space_config['fixed_sigma'] and sigma_config['name'] == 'const_initializer':
+                    # A constant log standard deviation belongs in the bias.
+                    nn.init.zeros_(self.sigma.weight)
+                    nn.init.constant_(self.sigma.bias, sigma_config['val'])
 
             return
         
