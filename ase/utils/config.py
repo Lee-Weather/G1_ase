@@ -126,6 +126,9 @@ def load_cfg(args):
     if args.max_iterations > 0:
         cfg_train["params"]["config"]['max_epochs'] = args.max_iterations
 
+    if getattr(args, "save_intermediate", False):
+        cfg_train["params"]["config"]["save_intermediate"] = True
+
     cfg_train["params"]["config"]["num_actors"] = cfg["env"]["numEnvs"]
 
     seed = cfg_train["params"].get("seed", -1)
@@ -210,6 +213,8 @@ def get_args(benchmark=False):
         {"name": "--seed", "type": int, "help": "Random seed"},
         {"name": "--max_iterations", "type": int, "default": 0,
             "help": "Set a maximum number of training iterations"},
+        {"name": "--save-intermediate", "action": "store_true",
+            "help": "Keep a separately named checkpoint at each configured save interval"},
         {"name": "--horizon_length", "type": int, "default": -1,
             "help": "Set number of simulation steps per 1 PPO iteration. Supported only by rl_games. If not -1 overrides the config settings."},
         {"name": "--minibatch_size", "type": int, "default": -1,

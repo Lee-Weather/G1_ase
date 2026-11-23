@@ -162,6 +162,18 @@ def cloud_observer_class(entry, args):
                 "amp_dim": metadata["amp_dim"], "motions": metadata["motions"],
                 "hlc": metadata.get("hlc"),
             }), flush=True)
+            if args.algorithm == "hrl":
+                params = entry.cfg_train["params"]
+                space = params["network"]["space"]["continuous"]
+                config = params["config"]
+                print("G1_HRL_CONFIG " + json.dumps({
+                    "cfg_train": entry.args.cfg_train,
+                    "fixed_sigma": space["fixed_sigma"],
+                    "learn_sigma": space["learn_sigma"],
+                    "entropy_coef": config.get("entropy_coef"),
+                    "save_frequency": config.get("save_frequency"),
+                    "save_intermediate": config.get("save_intermediate", False),
+                }), flush=True)
 
         def process_infos(self, infos, done_indices):
             super().process_infos(infos, done_indices)
